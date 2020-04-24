@@ -85118,6 +85118,7 @@ function () {
       lat: parseFloat(faker_1.default.address.latitude()),
       lng: parseFloat(faker_1.default.address.longitude())
     };
+    this.color = 'blue';
   }
 
   User.prototype.markerContent = function () {
@@ -85153,6 +85154,7 @@ function () {
       lat: parseFloat(faker_1.default.address.latitude()),
       lng: parseFloat(faker_1.default.address.longitude())
     };
+    this.color = 'red';
   }
 
   Company.prototype.markerContent = function () {

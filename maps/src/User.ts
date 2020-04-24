@@ -6,6 +6,7 @@ export class User implements Mappable {
     lat: number;
     lng: number;
   };
+  color: string;
 
   constructor() {
     this.name = faker.name.firstName();
@@ -13,6 +14,7 @@ export class User implements Mappable {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude()),
     };
+    this.color = 'blue';
   }
 
   markerContent(): string {
