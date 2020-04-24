@@ -6,12 +6,6 @@ import { CustomMap } from './CustomMap';
 const user = new User();
 
 const company = new Company();
-new google.maps.Map(document.getElementById('map'), {
-  zoom: 1,
-  center: {
-    lat: 0,
-    lng: 0,
-  },
-});
+const customMap = new CustomMap('map');
 
-new CustomMap('map');
+customMap.addUserMarker(user);
