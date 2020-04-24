@@ -85116,7 +85116,7 @@ function () {
     this.name = faker_1.default.name.firstName();
     this.location = {
       lat: parseFloat(faker_1.default.address.latitude()),
-      lon: parseFloat(faker_1.default.address.longitude())
+      lng: parseFloat(faker_1.default.address.longitude())
     };
   }
 
@@ -85147,7 +85147,7 @@ function () {
     this.catchPhrase = faker_1.default.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker_1.default.address.latitude()),
-      lon: parseFloat(faker_1.default.address.longitude())
+      lng: parseFloat(faker_1.default.address.longitude())
     };
   }
 
@@ -85156,7 +85156,8 @@ function () {
 
 exports.Company = Company;
 },{"faker":"node_modules/faker/index.js"}],"src/CustomMap.ts":[function(require,module,exports) {
-"use strict";
+"use strict"; // Instructions to every other class
+// on how they can be an argument to 'addMarker'
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -85180,7 +85181,7 @@ function () {
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
-        lng: mappable.location.lon
+        lng: mappable.location.lng
       }
     });
   };
@@ -85205,8 +85206,8 @@ var CustomMap_1 = require("./CustomMap");
 var user = new User_1.User();
 var company = new Company_1.Company();
 var customMap = new CustomMap_1.CustomMap('map');
-customMap.addUserMarker(user);
-customMap.addCompanyMarker(company);
+customMap.addMarker(user);
+customMap.addMarker(company);
 },{"./User":"src/User.ts","./Company":"src/Company.ts","./CustomMap":"src/CustomMap.ts"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -1,6 +1,3 @@
-import { User } from './User';
-import { Company } from './Company';
-
 // Instructions to every other class
 // on how they can be an argument to 'addMarker'
 
@@ -28,18 +25,8 @@ export class CustomMap {
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
-        lng: mappable.location.lon,
+        lng: mappable.location.lng,
       },
     });
   }
-
-  // addCompanyMarker(company: Company): void {
-  //   new google.maps.Marker({
-  //     map: this.googleMap,
-  //     position: {
-  //       lat: company.location.lat,
-  //       lng: company.location.lon,
-  //     },
-  //   });
-  // }
 }
