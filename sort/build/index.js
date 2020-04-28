@@ -1,5 +1,13 @@
 "use strict";
-console.log('Helo typescript');
-var Jina = function () {
-    return 'Hello Sir';
-};
+var Sorter = /** @class */ (function () {
+    // collection: number[];
+    // constructor(collection: number[]) {
+    //   this.collection = collection;
+    // }
+    function Sorter(collection) {
+        this.collection = collection;
+    }
+    Sorter.prototype.sort = function () { };
+    return Sorter;
+}());
+var sorter = new Sorter([10, 3, -5, 0]);
