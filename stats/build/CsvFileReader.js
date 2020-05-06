@@ -26,6 +26,9 @@ var CsvFileReader = /** @class */ (function () {
                 row[2],
                 parseInt(row[3]),
                 parseInt(row[4]),
+                // assertion
+                row[5],
+                row[6]
             ];
         });
     };
