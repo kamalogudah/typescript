@@ -50,4 +50,31 @@ const printAnything = < T extends {} >(arr: T[]): void => {
 
 printAnything<string>(['a', 'b', 'c']);
 
-printAnything([1,2,3,4]);
+printAnything([1, 2, 3, 4]);
+
+// Generic Constraint
+
+class Car{
+  print() {
+    console.log('I am a Car');
+  }
+}
+
+class House {
+  print() {
+    console.log('I am a House');
+  }
+}
+
+interface Printable {
+  print(): void;
+}
+const printHousesOrCars = <T extends Printable>(arr: T[]): void => {
+   for (let i = 0; i < arr.length; i++) {
+     arr[i].print();
+   }
+
+}
+
+printHousesOrCars<House>([new House(), new House()]);
+printHousesOrCars([new House(), new Car(), new House()]);
